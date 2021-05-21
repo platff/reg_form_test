@@ -10,9 +10,7 @@ import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.*;
 
-public class reg_form_test {
-
-    //static Logger log = LoggerFactory.getLogger(reg_form_test.class);
+public class RegFormTest {
 
     @BeforeAll
     static void setUpBrowser() {
@@ -20,18 +18,15 @@ public class reg_form_test {
 
         Configuration.browser = "chrome";
         Configuration.startMaximized = true;
-
     }
 
     @BeforeEach
     void openTestPage(){
-
         String PageURL = "https://demoqa.com/automation-practice-form";
 
         System.out.println("Test page opening...");
 
         open(PageURL);
-
     }
 
     @AfterEach
@@ -42,7 +37,6 @@ public class reg_form_test {
 
     @Test
     void selenideSearchTest() {
-
         String firstNameText = "John";
         String lastNameText  = "Dow";
         String firstNameFieldID  = "firstName";
