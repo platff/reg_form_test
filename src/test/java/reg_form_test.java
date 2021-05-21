@@ -66,6 +66,8 @@ public class reg_form_test {
         $(".react-datepicker__year-select").selectOption("2000");
         $(".react-datepicker__day--014").click();
 
+        $("#subjectsInput").setValue("Biology").pressEnter();
+
         $("[for=hobbies-checkbox-2]").click();
         $("#uploadPicture").uploadFile(new File("src/recources/picture.jpg"));
 
@@ -84,7 +86,8 @@ public class reg_form_test {
                 text("Date of Birth"), text("14 June,2000"),
                 text("Hobbies"), text("Reading\n"),
                 text("Picture"), text("picture.jpg"),
-                text("State and City"), text("NCR Delhi")
+                text("State and City"), text("NCR Delhi"),
+                text("Subjects"), text("Biology")
         );
 
         System.out.println("Ending form test....");
