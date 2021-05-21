@@ -3,6 +3,8 @@ import org.junit.jupiter.api.*;
 /*import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;*/
 
+import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byName;
@@ -64,8 +66,26 @@ public class reg_form_test {
         $(".react-datepicker__year-select").selectOption("2000");
         $(".react-datepicker__day--014").click();
 
+        $("[for=hobbies-checkbox-2]").click();
+        $("#uploadPicture").uploadFile(new File("src/recources/picture.jpg"));
+
+        $("#react-select-3-input").setValue("NCR").pressEnter();
+        $("#react-select-4-input").setValue("Delhi").pressEnter();
+
         // Press button
         $(byId("submit")).pressEnter();
+
+        //Check
+        $(".table-responsive").shouldHave(
+                text("Student Name"), text(firstNameText + " " + lastNameText),
+                text("Student Email"), text(userEmail),
+                text("Gender"), text("Other"),
+                text("Mobile"), text(phoneNumber),
+                text("Date of Birth"), text("14 June,2000"),
+                text("Hobbies"), text("Reading\n"),
+                text("Picture"), text("picture.jpg"),
+                text("State and City"), text("NCR Delhi")
+        );
 
         System.out.println("Ending form test....");
     }
