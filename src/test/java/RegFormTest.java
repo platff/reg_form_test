@@ -37,12 +37,12 @@ public class RegFormTest {
 
     @Test
     void selenideSearchTest() {
-        String firstNameText = "John";
-        String lastNameText  = "Dow";
-        String firstNameFieldID  = "firstName";
-        String lastNameFieldID   = "lastName";
-        String userEmail = "nomail@nomail.org";
-        String phoneNumber = "1234567890";
+        String firstNameText        = "James";
+        String lastNameText         = "Wilson";
+        String firstNameFieldID     = "firstName";
+        String lastNameFieldID      = "lastName";
+        String userEmail            = "nomail@nomail.org";
+        String phoneNumber          = "1234567890";
 
         //log.info("Starting form test....");
         System.out.println("Starting form test....");
@@ -56,8 +56,8 @@ public class RegFormTest {
 
         // DoB selection
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption("June");
-        $(".react-datepicker__year-select").selectOption("2000");
+        $(".react-datepicker__month-select").selectOption("July");
+        $(".react-datepicker__year-select").selectOption("1999");
         $(".react-datepicker__day--014").click();
 
         $("#subjectsInput").setValue("Biology").pressEnter();
