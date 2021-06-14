@@ -37,12 +37,12 @@ public class RegFormTest {
 
     @Test
     void selenideSearchTest() {
-        String firstNameText = "John";
-        String lastNameText  = "Dow";
-        String firstNameFieldID  = "firstName";
-        String lastNameFieldID   = "lastName";
-        String userEmail = "nomail@nomail.org";
-        String phoneNumber = "1234567890";
+        String firstNameText        = "John";
+        String lastNameText         = "Dow";
+        String firstNameFieldID     = "firstName";
+        String lastNameFieldID      = "lastName";
+        String userEmail            = "nomail@nomail.org";
+        String phoneNumber          = "1234567890";
 
         //log.info("Starting form test....");
         System.out.println("Starting form test....");
