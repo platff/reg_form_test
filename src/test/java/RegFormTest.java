@@ -71,7 +71,7 @@ public class RegFormTest {
         // Press button
         $(byId("submit")).pressEnter();
 
-        //Check
+        //Check table
         $(".table-responsive").shouldHave(
                 text("Student Name"), text(firstNameText + " " + lastNameText),
                 text("Student Email"), text(userEmail),
