@@ -37,8 +37,8 @@ public class RegFormTest {
 
     @Test
     void selenideSearchTest() {
-        String firstNameText        = "John";
-        String lastNameText         = "Dow";
+        String firstNameText        = "James";
+        String lastNameText         = "Wilson";
         String firstNameFieldID     = "firstName";
         String lastNameFieldID      = "lastName";
         String userEmail            = "nomail@nomail.org";
