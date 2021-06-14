@@ -56,8 +56,8 @@ public class RegFormTest {
 
         // DoB selection
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption("June");
-        $(".react-datepicker__year-select").selectOption("2000");
+        $(".react-datepicker__month-select").selectOption("July");
+        $(".react-datepicker__year-select").selectOption("1999");
         $(".react-datepicker__day--014").click();
 
         $("#subjectsInput").setValue("Biology").pressEnter();
