@@ -54,24 +54,39 @@ public class RegFormTest {
         $("#gender-radio-3").doubleClick();
         $("#userNumber").setValue(phoneNumber);
 
+        System.out.println("User details are entered...");
+
         // DoB selection
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("July");
         $(".react-datepicker__year-select").selectOption("1999");
         $(".react-datepicker__day--014").click();
 
+        System.out.println("Date of birth is chosen...");
+
         $("#subjectsInput").setValue("Biology").pressEnter();
 
+        System.out.println("Subjects are added...");
+
         $("[for=hobbies-checkbox-2]").click();
+
+        System.out.println("Hobbies are chosen...");
+
         $("#uploadPicture").uploadFile(new File("src/recources/picture.jpg"));
+
+        System.out.println("Picture is uploaded...");
 
         $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#react-select-4-input").setValue("Delhi").pressEnter();
 
+        System.out.println("City and State are chosen...");
+
         // Press button
         $(byId("submit")).pressEnter();
 
-        //Check
+        System.out.println("Form is submitted...");
+
+        //Check table
         $(".table-responsive").shouldHave(
                 text("Student Name"), text(firstNameText + " " + lastNameText),
                 text("Student Email"), text(userEmail),
